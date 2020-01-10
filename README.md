@@ -13,10 +13,14 @@ Dependencies
 "selenium-webdriver": "^4.0.0-alpha.5"
 },
 
+Para correr el servidor
 entrar a myapp y correr node app.js
 
+Para correr unicamente mocha
 en cucumberjs npm run-script mocha
 
+Para correr unicamente cucumber
 en cucumberjs npm run-script cucumber
 
-en cucumber npm test
+Para correr cucumber y mocha
+en cucumberJ npm test
