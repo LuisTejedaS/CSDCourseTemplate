@@ -27,7 +27,7 @@ Given("i go to google", async function() {
     });
 });
 
-When("i make a search", async function() {
+When("i make a search", { timeout: 3 * 5000 }, async function() {
   // Find the search box by id
   await driver.findElement(By.name("q")).click();
   // Enter keywords and click enter
@@ -36,7 +36,7 @@ When("i make a search", async function() {
   await driver.wait(until.elementLocated(By.id("rcnt")), 10000);
 });
 
-Then("should see results", async function() {
+Then("should see results", { timeout: 3 * 5000 }, async function() {
   // We will get the title value and test it
   let title = await driver.getTitle();
   assert.equal(title, "infected human - Buscar con Google");
